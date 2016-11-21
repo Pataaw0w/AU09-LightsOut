@@ -1,0 +1,23 @@
+Aufgabenstellung:
+	
+	Aufgabe ist es ein Spiel names "Lights out" zu programmieren. In dem Spiel geht es darum mit der Maus
+	auf ein 5x5 Feld mit 25 Buttons zu drücken. Zufällig viele < 25 > 0 
+	davon sind Schwarz und Zufällig < 25 > 0 viele weiß.
+	Das Ziel des Spiels ist es alle Felder schwarz zu bekommen.
+	
+Team:
+
+	Zhanel Patrick
+	
+	Schwarz Vincent
+	
+	Kern Christoph
+	
+	
+Arbeitsaufteilung:
+	
+	Zhanel Patrick: 	Model, Test
+	
+	Schwarz Vincent:	View
+	
+	Kern Christoph: 	Controller, ReadMe
