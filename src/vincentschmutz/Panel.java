@@ -2,24 +2,25 @@ package vincentschmutz;
 import java.awt.Color;
 import java.awt.GridLayout;
 import javax.swing.*;
-
+/**
+ * @author Vincent Schwartz
+ * @version 2016-11-22
+ */
 public class Panel extends JPanel{
 	private JButton[][] goebbels;
 	private int random, random2;
+	/**
+	 * Constructor for Panel
+	 */
 	public Panel(){
 		this.goebbels = new JButton[5][5];
-		this.random = (int)(Math.random()*3);
-		this.random2 = (int)(Math.random()*3);
 		for(int i=0; i<5; i++) {
 			for(int j=0; j<5; j++) {
 				this.goebbels[i][j] = new JButton(); //i = x-Achse, j = y-Achse
+				this.goebbels[i][j].setBackground(Color.gray);
 			}
 		}
-		for(int i=0; i<5; i++) {
-			for(int j=0; j<5; j++) {
-				this.goebbels[random][random2].setBackground(Color.gray);
-			}
-		}
+		
 		this.setLayout(new GridLayout(5,5));
 		for(int i=0; i<5; i++) {
 			for(int j=0; j<5; j++) {
@@ -27,7 +28,10 @@ public class Panel extends JPanel{
 			}
 		}
 	}
-	
+	/**
+	 * @param b
+	 * @return true if b == this.goebbels[x][y] 
+	 */
 	public boolean isJButton1(JButton b){
 		if(b == this.goebbels[0][0]) return true;
 		return false;
