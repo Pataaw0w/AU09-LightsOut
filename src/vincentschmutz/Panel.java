@@ -33,12 +33,24 @@ public class Panel extends JPanel{
 		}
 	}
 	
-	public void hanz(JButton b){
+	public void change(JButton b){
 		for(int i=0; i<5; i++){
 			for(int j=0; j<5; j++){
 				if(this.goebbels[i][j] == b){
 					this.lo.changeColor(i, j);
 				}
+			}
+		}
+	}
+	
+	public void refresh(){
+		boolean licht[][] = lo.getLights();
+		for(int i=0; i<5; i++){
+			for(int j=0; j<5; j++){
+				if(licht[i][j])
+					goebbels[i][j].setBackground(Color.white);
+				else 
+					goebbels[i][j].setBackground(Color.gray);
 			}
 		}
 	}
