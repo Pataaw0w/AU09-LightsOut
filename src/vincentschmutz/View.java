@@ -1,10 +1,22 @@
 package vincentschmutz;
-
+import java.awt.BorderLayout;
+import java.awt.Container;
+import java.util.*;
+import javax.swing.*;
 /**
- * @author vschwarz
- *
+ * @author Vincent Schwartz
+ * @version 2016-11-21
  */
-
-public class View {
-
+public class View extends JFrame{
+	private Panel p;
+	public View(Panel p){
+		this.p = p;
+		this.setTitle("LightsOut");
+		this.setSize(1000, 1000);
+		this.setLocationRelativeTo(null);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.add(this.p);
+		this.setVisible(true);
+	}
+	
 }
