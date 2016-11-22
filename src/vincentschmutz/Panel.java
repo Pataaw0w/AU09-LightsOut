@@ -30,6 +30,17 @@ public class Panel extends JPanel{
 			}
 		}
 	}
+	
+	public void hanz(JButton b){
+		for(int i=0; i<5; i++){
+			for(int j=0; j<5; j++){
+				if(this.goebbels[i][j] == b){
+					
+				}
+			}
+		}
+	}
+	
 	/**
 	 * Getter for the JButtons
 	 * @return JButton at the index this.goebbels[x][x]
@@ -39,21 +50,25 @@ public class Panel extends JPanel{
 	public JButton getJButton3(){return this.goebbels[0][2];}
 	public JButton getJButton4(){return this.goebbels[0][3];}
 	public JButton getJButton5(){return this.goebbels[0][4];}
+	
 	public JButton getJButton6(){return this.goebbels[1][0];}
 	public JButton getJButton7(){return this.goebbels[1][1];}
 	public JButton getJButton8(){return this.goebbels[1][2];}
 	public JButton getJButton9(){return this.goebbels[1][3];}
 	public JButton getJButton10(){return this.goebbels[1][4];}
+	
 	public JButton getJButton11(){return this.goebbels[2][0];}
 	public JButton getJButton12(){return this.goebbels[2][1];}
 	public JButton getJButton13(){return this.goebbels[2][2];}
 	public JButton getJButton14(){return this.goebbels[2][3];}
 	public JButton getJButton15(){return this.goebbels[2][4];}
+	
 	public JButton getJButton16(){return this.goebbels[3][0];}
 	public JButton getJButton17(){return this.goebbels[3][1];}
 	public JButton getJButton18(){return this.goebbels[3][2];}
 	public JButton getJButton19(){return this.goebbels[3][3];}
 	public JButton getJButton20(){return this.goebbels[3][4];}
+	
 	public JButton getJButton21(){return this.goebbels[4][0];}
 	public JButton getJButton22(){return this.goebbels[4][1];}
 	public JButton getJButton23(){return this.goebbels[4][2];}
@@ -91,10 +106,9 @@ public class Panel extends JPanel{
 	public boolean isJButton22(JButton b){return b == this.goebbels[4][1];}
 	public boolean isJButton23(JButton b){return b == this.goebbels[4][2];}
 	public boolean isJButton24(JButton b){return b == this.goebbels[4][3];}
-	public boolean isJButton25(JButton b){return b == this.goebbels[2][4];}
+	public boolean isJButton25(JButton b){return b == this.goebbels[4][4];}
 	
 	public void refresh(){
 		this.repaint();
 	}
 }
-
