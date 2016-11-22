@@ -108,7 +108,4 @@ public class Panel extends JPanel{
 	public boolean isJButton24(JButton b){return b == this.goebbels[4][3];}
 	public boolean isJButton25(JButton b){return b == this.goebbels[4][4];}
 	
-	public void refresh(){
-		this.repaint();
-	}
 }
