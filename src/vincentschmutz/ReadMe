@@ -1,0 +1,26 @@
+Aufgabenstellung:
+	
+	Es soll ein 5x5 Feld, bestehend aus Buttons, erstellt werden. Ziel ist es, alle "Lichter"
+	in so wenig Zügen wie möglich auszuschalten.
+	Dies geschieht durch gezieltes klicken auf die einzelnen Buttons. Wird ein Button gedrückt, so gehen
+	dieser und die angrenzenden Buttons - in den 4 Himmelsrichtungen - aus oder auch ein.
+	Dabei sind zufällig viele "Lichter" anfangs eingeschalten (>0, <25).
+	
+	
+Teammitglieder:
+
+	Kern Christoph
+
+	Schwartz Vincent
+
+	Zhanel Patrick
+	
+	
+	
+Arbeitsteilung:
+	
+	Zhanel Patrick: 	Model, Controller, ReadME
+	
+	Schwartz Vincent:	View, Controller
+	
+	Kern Christoph: 	-ReadME-
