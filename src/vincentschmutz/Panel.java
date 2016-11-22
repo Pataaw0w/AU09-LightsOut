@@ -9,11 +9,13 @@ import javax.swing.*;
 public class Panel extends JPanel{
 	private JButton[][] goebbels;
 	private Controller c;
+	private LightsOut lo;
 	/**
 	 * Constructor for Panel
 	 */
-	public Panel(Controller c){
+	public Panel(Controller c, LightsOut lo){
 		this.c = c;
+		this.lo = lo;
 		this.goebbels = new JButton[5][5];
 		for(int i=0; i<5; i++) {
 			for(int j=0; j<5; j++) {
@@ -35,7 +37,7 @@ public class Panel extends JPanel{
 		for(int i=0; i<5; i++){
 			for(int j=0; j<5; j++){
 				if(this.goebbels[i][j] == b){
-					
+					this.lo.changeColor(i, j);
 				}
 			}
 		}
@@ -109,3 +111,4 @@ public class Panel extends JPanel{
 	public boolean isJButton25(JButton b){return b == this.goebbels[4][4];}
 	
 }
+
