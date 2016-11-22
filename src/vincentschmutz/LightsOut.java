@@ -40,7 +40,7 @@ public class LightsOut {
 	
 	public void changeColor(int x, int y){
 		
-		if(x != 0 && x != 5 && y != 0 && y != 5) {
+		if(x != 0 && x != 4 && y != 0 && y != 4) {
 		
 			this.lights[x][y] = !this.lights[x][y];
 			this.lights[x+1][y] = !this.lights[x+1][y];
@@ -48,28 +48,28 @@ public class LightsOut {
 			this.lights[x][y+1] = !this.lights[x][y+1];
 			this.lights[x][y-1] = !this.lights[x][y-1];
 			
-		} else if(x == 0 && y != 0 && y != 5){
+		} else if(x == 0 && y != 0 && y != 4){
 			
 			this.lights[x][y] = !this.lights[x][y];
 			this.lights[x+1][y] = !this.lights[x+1][y];
 			this.lights[x][y+1] = !this.lights[x][y+1];
 			this.lights[x][y-1] = !this.lights[x][y-1];
 			
-		} else if(x == 5 && y != 0 && y != 5){
+		} else if(x == 4 && y != 0 && y != 4){
 			
 			this.lights[x][y] = !this.lights[x][y];
 			this.lights[x-1][y] = !this.lights[x-1][y];
 			this.lights[x][y+1] = !this.lights[x][y+1];
 			this.lights[x][y-1] = !this.lights[x][y-1];
 			
-		} else if(x != 0 && x != 5 && y == 0){
+		} else if(x != 0 && x != 4 && y == 0){
 			
 			this.lights[x][y] = !this.lights[x][y];
 			this.lights[x+1][y] = !this.lights[x+1][y];
 			this.lights[x-1][y] = !this.lights[x-1][y];
 			this.lights[x][y+1] = !this.lights[x][y+1];
 			
-		} else if(x != 0 && x != 5 && y == 5){
+		} else if(x != 0 && x != 4 && y == 4){
 			
 			this.lights[x][y] = !this.lights[x][y];
 			this.lights[x+1][y] = !this.lights[x+1][y];
@@ -82,19 +82,19 @@ public class LightsOut {
 			this.lights[x+1][y] = !this.lights[x+1][y];
 			this.lights[x][y+1] = !this.lights[x][y+1];
 			
-		} else if(x == 5 && y == 0){
+		} else if(x == 4 && y == 0){
 			
 			this.lights[x][y] = !this.lights[x][y];
 			this.lights[x-1][y] = !this.lights[x-1][y];
 			this.lights[x][y+1] = !this.lights[x][y+1];
 			
-		} else if(x == 0 && y == 5){
+		} else if(x == 0 && y == 4){
 			
 			this.lights[x][y] = !this.lights[x][y];
 			this.lights[x+1][y] = !this.lights[x+1][y];
 			this.lights[x][y-1] = !this.lights[x][y-1];
 			
-		} else if(x == 5 && y == 5){
+		} else if(x == 4 && y == 4){
 			
 			this.lights[x][y] = !this.lights[x][y];
 			this.lights[x+-1][y] = !this.lights[x+-1][y];
