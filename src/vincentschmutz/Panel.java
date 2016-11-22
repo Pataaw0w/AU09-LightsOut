@@ -1,25 +1,131 @@
 package vincentschmutz;
 import java.awt.Color;
 import java.awt.GridLayout;
-import java.util.*;
 import javax.swing.*;
 
 public class Panel extends JPanel{
-	private ArrayList<JButton> goebbels;
+	private JButton[][] goebbels;
+	private int random, random2;
 	public Panel(){
-		this.goebbels = new ArrayList<JButton>();
-		ImageIcon imageForOne = new ImageIcon(getClass().getResource("hahn.jpg"));
-		for(int i=0; i<25; i++) this.goebbels.add(new JButton("", imageForOne));
-		this.setLayout(new GridLayout(5,5));
-		for(JButton b:goebbels) {
-			//b.setBackground(Color.gray);
-			this.add(b);
+		this.goebbels = new JButton[5][5];
+		this.random = (int)(Math.random()*3);
+		this.random2 = (int)(Math.random()*3);
+		for(int i=0; i<5; i++) {
+			for(int j=0; j<5; j++) {
+				this.goebbels[i][j] = new JButton(); //i = x-Achse, j = y-Achse
+			}
 		}
-		
+		for(int i=0; i<5; i++) {
+			for(int j=0; j<5; j++) {
+				this.goebbels[random][random2].setBackground(Color.gray);
+			}
+		}
+		this.setLayout(new GridLayout(5,5));
+		for(int i=0; i<5; i++) {
+			for(int j=0; j<5; j++) {
+				this.add(this.goebbels[i][j]);
+			}
+		}
 	}
 	
-	public boolean isJButton(JButton b){
-		//if(b == this.goebbels) return true;
+	public boolean isJButton1(JButton b){
+		if(b == this.goebbels[0][0]) return true;
+		return false;
+	}
+	public boolean isJButton2(JButton b){
+		if(b == this.goebbels[0][1]) return true;
+		return false;
+	}
+	public boolean isJButton3(JButton b){
+		if(b == this.goebbels[0][2]) return true;
+		return false;
+	}
+	public boolean isJButton4(JButton b){
+		if(b == this.goebbels[0][3]) return true;
+		return false;
+	}
+	public boolean isJButton5(JButton b){
+		if(b == this.goebbels[0][4]) return true;
+		return false;
+	}
+	public boolean isJButton6(JButton b){
+		if(b == this.goebbels[1][0]) return true;
+		return false;
+	}
+	public boolean isJButton7(JButton b){
+		if(b == this.goebbels[1][1]) return true;
+		return false;
+	}
+	public boolean isJButton8(JButton b){
+		if(b == this.goebbels[1][2]) return true;
+		return false;
+	}
+	public boolean isJButton9(JButton b){
+		if(b == this.goebbels[1][3]) return true;
+		return false;
+	}
+	public boolean isJButton10(JButton b){
+		if(b == this.goebbels[1][4]) return true;
+		return false;
+	}
+	public boolean isJButton11(JButton b){
+		if(b == this.goebbels[2][0]) return true;
+		return false;
+	}
+	public boolean isJButton12(JButton b){
+		if(b == this.goebbels[2][1]) return true;
+		return false;
+	}
+	public boolean isJButton13(JButton b){
+		if(b == this.goebbels[2][2]) return true;
+		return false;
+	}
+	public boolean isJButton14(JButton b){
+		if(b == this.goebbels[2][3]) return true;
+		return false;
+	}
+	public boolean isJButton15(JButton b){
+		if(b == this.goebbels[2][4]) return true;
+		return false;
+	}
+	public boolean isJButton16(JButton b){
+		if(b == this.goebbels[3][0]) return true;
+		return false;
+	}
+	public boolean isJButton17(JButton b){
+		if(b == this.goebbels[3][1]) return true;
+		return false;
+	}
+	public boolean isJButton18(JButton b){
+		if(b == this.goebbels[3][2]) return true;
+		return false;
+	}
+	public boolean isJButton19(JButton b){
+		if(b == this.goebbels[3][3]) return true;
+		return false;
+	}
+	public boolean isJButton20(JButton b){
+		if(b == this.goebbels[3][4]) return true;
+		return false;
+	}
+	public boolean isJButton21(JButton b){
+		if(b == this.goebbels[4][0]) return true;
+		return false;
+	}
+	public boolean isJButton22(JButton b){
+		if(b == this.goebbels[4][1]) return true;
+		return false;
+	}
+	public boolean isJButton23(JButton b){
+		if(b == this.goebbels[4][2]) return true;
+		return false;
+	}
+	public boolean isJButton24(JButton b){
+		if(b == this.goebbels[4][3]) return true;
+		return false;
+	}
+	public boolean isJButton25(JButton b){
+		if(b == this.goebbels[4][4]) return true;
 		return false;
 	}
 }
