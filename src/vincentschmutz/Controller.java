@@ -1,7 +1,7 @@
 package vincentschmutz;
 
 /**
- * @author pzhanel
+ * @author ckern
  *
  */
 public class Controller {
