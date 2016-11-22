@@ -97,10 +97,16 @@ public class LightsOut {
 		} else if(x == 4 && y == 4){
 			
 			this.lights[x][y] = !this.lights[x][y];
-			this.lights[x+-1][y] = !this.lights[x+-1][y];
+			this.lights[x-1][y] = !this.lights[x-1][y];
 			this.lights[x][y-1] = !this.lights[x][y-1];
 			
 		}
+		
+	}
+	
+	public boolean[][] getLights(){
+		
+		return this.lights;
 		
 	}
 
