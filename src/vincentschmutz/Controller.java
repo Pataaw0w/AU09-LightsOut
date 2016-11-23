@@ -39,7 +39,7 @@ public class Controller implements ActionListener{
 			this.p.change(this.p.getJButton5());
 		}
 		if(this.p.isJButton6((JButton)e.getSource())){
-			this.p.change(this.p.getJButton5());
+			this.p.change(this.p.getJButton6());
 		}
 		if(this.p.isJButton7((JButton)e.getSource())){
 			this.p.change(this.p.getJButton7());
@@ -102,5 +102,3 @@ public class Controller implements ActionListener{
 	}
 	
 }
-
-
