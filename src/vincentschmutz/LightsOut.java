@@ -21,11 +21,26 @@ public class LightsOut {
 		for(int i = 0; i < 5; i++){
 			
 			for(int j = 0; j < 5; j++){
-			
-			boolean random = Math.random() >= 0.5;
-			this.lights[i][j] = random;
+							
+				//boolean random = Math.random() >= 0.5;
+				this.lights[i][j] = false;
 					
 			}
+			
+		}
+		
+	}
+	
+	public void click(){
+		
+		int random = (int)(Math.random()*24);
+		
+		for(int i = 3; i <= random; i++){
+			
+			int x = (int)(Math.random()*4);
+			int y = (int)(Math.random()*4);
+			
+			changeColor(x, y);
 			
 		}
 		
