@@ -1,5 +1,8 @@
 package vincentschmutz;
+import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import javax.swing.*;
 /**
@@ -10,6 +13,8 @@ public class Panel extends JPanel{
 	private JButton[][] goebbels;
 	private Controller c;
 	private LightsOut lo;
+	private JButton start;
+	private JLabel l;
 	/**
 	 * Constructor for Panel
 	 */
@@ -17,6 +22,13 @@ public class Panel extends JPanel{
 		this.c = c;
 		this.lo = lo;
 		this.goebbels = new JButton[5][5];
+		this.start = new JButton("Start");
+		this.l = new JLabel();
+		Dimension d = new Dimension(100, 100);
+		Font f = new Font("Arial", Font.BOLD, 30);
+		this.start.setPreferredSize(d);
+		this.start.setFont(f);
+		this.start.addActionListener(this.c);
 		for(int i=0; i<5; i++) {
 			for(int j=0; j<5; j++) {
 				this.goebbels[i][j] = new JButton(); //i = x-Achse, j = y-Achse
@@ -24,13 +36,16 @@ public class Panel extends JPanel{
 				this.goebbels[i][j].setBackground(Color.gray);
 			}
 		}
-		
-		this.setLayout(new GridLayout(5,5));
+		this.setLayout(new BorderLayout());
+		this.add(this.l, BorderLayout.CENTER);
+		this.l.setLayout(new GridLayout(5,5));
 		for(int i=0; i<5; i++) {
 			for(int j=0; j<5; j++) {
-				this.add(this.goebbels[i][j]);
+				this.l.add(this.goebbels[i][j]);
 			}
 		}
+		this.add(this.start, BorderLayout.SOUTH);
+		
 	}
 	
 	public void change(JButton b){
@@ -48,9 +63,9 @@ public class Panel extends JPanel{
 		for(int i=0; i<5; i++){
 			for(int j=0; j<5; j++){
 				if(licht[i][j])
-					goebbels[i][j].setBackground(Color.white);
+					this.goebbels[i][j].setBackground(Color.white);
 				else 
-					goebbels[i][j].setBackground(Color.gray);
+					this.goebbels[i][j].setBackground(Color.gray);
 			}
 		}
 	}
@@ -121,6 +136,12 @@ public class Panel extends JPanel{
 	public boolean isJButton23(JButton b){return b == this.goebbels[4][2];}
 	public boolean isJButton24(JButton b){return b == this.goebbels[4][3];}
 	public boolean isJButton25(JButton b){return b == this.goebbels[4][4];}
+	/**
+	 * @param b
+	 * @return this.start
+	 */
+	public boolean isStart(JButton b){return b == this.start;}
 	
 }
+
 
