@@ -6,7 +6,6 @@ import javax.swing.*;
 /**
  * @author Patrick Zhanel, Vincent Schwartz
  * @version 2016-11-22
- *
  */
 public class Controller implements ActionListener{
 	private View v;
@@ -23,6 +22,9 @@ public class Controller implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
+		if(this.p.isStart((JButton)e.getSource())){
+			this.lo.click();
+		}
 		if(this.p.isJButton1((JButton)e.getSource())){
 			this.p.change(this.p.getJButton1());
 		}
@@ -102,3 +104,4 @@ public class Controller implements ActionListener{
 	}
 	
 }
+
