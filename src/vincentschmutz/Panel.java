@@ -1,9 +1,6 @@
 package vincentschmutz;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.GridLayout;
+import java.awt.*;
+import java.util.Arrays;
 import javax.swing.*;
 /**
  * @author Vincent Schwartz
@@ -64,6 +61,21 @@ public class Panel extends JPanel{
 		}
 	}
 	/**
+	 * Prüft ob in einem JButton Array alles false ist und erhöht count um 1, 
+	 * wenn count 24 ist dann wird JOptionPane.showMessageDialog aufgerufen
+	 * @param b
+	 */
+	public void isAllFalse(JButton[][] b){
+		int count = 0;
+		for(int i=0; i<5; i++){
+			for(int j=0; j<5; j++){
+				if(this.goebbels[i][j].getBackground() == Color.gray) count++;
+				if(count == 24) JOptionPane.showMessageDialog(null, "YOU WIN!", "END", JOptionPane.INFORMATION_MESSAGE);
+			}
+		} 
+	}
+	
+	/**
 	 * Geht das light Array durch und schaut welcher JButton auf true bzw. false gesetzt ist.
 	 * Wenn true, dann wird der JButton auf grau gesetzt.
 	 * Wenn false, dann wird der JButton auf weiß gesetzt.
@@ -72,12 +84,15 @@ public class Panel extends JPanel{
 		boolean licht[][] = lo.getLights();
 		for(int i=0; i<5; i++){
 			for(int j=0; j<5; j++){
-				if(licht[i][j])
+				if(licht[i][j]){
 					this.goebbels[i][j].setBackground(Color.white);
-				else 
+				}else{
 					this.goebbels[i][j].setBackground(Color.gray);
+					
+				}
 			}
 		}
+		isAllFalse(this.goebbels);
 	}
 	
 	/**
