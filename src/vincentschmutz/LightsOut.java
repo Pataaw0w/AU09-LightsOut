@@ -23,8 +23,7 @@ public class LightsOut {
 			
 			for(int j = 0; j < 5; j++){
 			
-			boolean random = Math.random() >= 0.5;
-			this.lights[i][j] = random;
+			this.lights[i][j] = true;
 					
 			}
 			
