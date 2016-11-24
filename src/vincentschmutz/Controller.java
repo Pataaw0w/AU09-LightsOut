@@ -12,14 +12,16 @@ public class Controller implements ActionListener{
 	private Panel p;
 	private LightsOut lo;
 	/**
-	 * Constructor for Controller
+	 * Constructor for Controller class
 	 */
 	public Controller(){
 		this.lo = new LightsOut();
 		this.p = new Panel(this, this.lo);
 		this.v = new View(this.p, this.lo, this);
 	}
-	
+	/**
+	 * In der actionPerformed Methode steht drinnen was pasieren soll, wenn der jeweilige Button gedrückt wurde.
+	 */
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(this.p.isStart((JButton)e.getSource())){
@@ -104,4 +106,5 @@ public class Controller implements ActionListener{
 	}
 	
 }
+
 
