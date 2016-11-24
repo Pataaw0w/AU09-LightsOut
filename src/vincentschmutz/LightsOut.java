@@ -1,10 +1,9 @@
 package vincentschmutz;
-
 import javax.swing.JButton;
 
 /**
  * @author Patrick Zhanel
- * @version 2016-11-19
+ * @version 2016-11-22
  * 
  * Model-Klasse für die benötigten Methoden.
  * true - an, false - off
@@ -13,7 +12,9 @@ import javax.swing.JButton;
 public class LightsOut {
 	
 	private boolean[][] lights;
-	
+	/**
+	 * Constructor for LightsOut (Model) class
+	 */
 	public LightsOut(){
 		
 		this.lights = new boolean[5][5];
@@ -21,29 +22,25 @@ public class LightsOut {
 		for(int i = 0; i < 5; i++){
 			
 			for(int j = 0; j < 5; j++){
-							
-				//boolean random = Math.random() >= 0.5;
-				this.lights[i][j] = false;
+			
+			boolean random = Math.random() >= 0.5;
+			this.lights[i][j] = random;
 					
 			}
 			
 		}
 		
 	}
-	
+	/**
+	 * Ändert die Farbe von einer "zufälligen" Anzahl von Buttons.
+	 */
 	public void click(){
-		
-		int random = (int)(Math.random()*24);
-		
-		for(int i = 3; i <= random; i++){
-			
+		int rdm = (int)(Math.random()*24);
+		for(int i=3; i<=rdm; i++){
 			int x = (int)(Math.random()*4);
 			int y = (int)(Math.random()*4);
-			
 			changeColor(x, y);
-			
 		}
-		
 	}
 	
 	/**
@@ -118,7 +115,10 @@ public class LightsOut {
 		}
 		
 	}
-	
+	/**
+	 * Gettet das boolean Array lights
+	 * @return this.lights
+	 */
 	public boolean[][] getLights(){
 		
 		return this.lights;
