@@ -16,7 +16,9 @@ public class Panel extends JPanel{
 	private JButton start;
 	private JLabel l;
 	/**
-	 * Constructor for Panel
+	 * Constructor for Panel class
+	 * @param c
+	 * @param lo 
 	 */
 	public Panel(Controller c, LightsOut lo){
 		this.c = c;
@@ -47,7 +49,11 @@ public class Panel extends JPanel{
 		this.add(this.start, BorderLayout.SOUTH);
 		
 	}
-	
+	/**
+	 * Geht 2D Array "goebbels" durch und prüft ob der JButton an der Stelle [i][j] mit dem JButton im Parameter übereinstimmt, 
+	 * wenn ja wird die changeColor Methode aufgerufen.
+	 * @param b
+	 */
 	public void change(JButton b){
 		for(int i=0; i<5; i++){
 			for(int j=0; j<5; j++){
@@ -57,7 +63,11 @@ public class Panel extends JPanel{
 			}
 		}
 	}
-	
+	/**
+	 * Geht das light Array durch und schaut welcher JButton auf true bzw. false gesetzt ist.
+	 * Wenn true, dann wird der JButton auf grau gesetzt.
+	 * Wenn false, dann wird der JButton auf weiß gesetzt.
+	 */
 	public void refresh(){
 		boolean licht[][] = lo.getLights();
 		for(int i=0; i<5; i++){
