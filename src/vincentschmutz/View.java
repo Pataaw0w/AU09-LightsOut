@@ -11,12 +11,18 @@ public class View extends JFrame{
 	private Panel p;
 	private Controller c;
 	private LightsOut lo;
+	/**
+	 * Constructor for View class
+	 * @param p
+	 * @param lo
+	 * @param c
+	 */
 	public View(Panel p, LightsOut lo, Controller c){
 		this.p = p;
 		this.c = c;
 		this.lo = lo;
 		this.setTitle("LightsOut");
-		this.setSize(1000, 1000);
+		this.setSize(1000, 1100);
 		this.setLocationRelativeTo(null);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.add(this.p);
